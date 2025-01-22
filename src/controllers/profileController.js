@@ -1,10 +1,7 @@
-const express = require('express');
 const { faker } = require('@faker-js/faker');
 
-const app = express();
-const port = 3000;
-
-app.get('/random-profiles', (req, res) => {
+// Generates random profiles
+const getRandomProfiles = (req, res) => {
   const profiles = [];
   for (let i = 0; i < 10; i++) {
     const profile = {
@@ -17,8 +14,6 @@ app.get('/random-profiles', (req, res) => {
     profiles.push(profile);
   }
   res.json(profiles);
-});
+};
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+module.exports = { getRandomProfiles };

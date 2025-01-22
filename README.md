@@ -28,13 +28,13 @@ Start the server by running the following command:
 node index.js
 ```
 
-The server will be running on `http://localhost:3000`.
+The server will be running on `http://localhost:5000`.
 
 ## API Endpoints
 
 ### Get Random Profiles
 
-- **Endpoint:** `/random-profiles`
+- **Endpoint:** `/api/random-profiles`
 - **Method:** `GET`
 - **Description:** Returns a list of 10 random profiles.
 - **Response:**
