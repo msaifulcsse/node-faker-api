@@ -14,6 +14,10 @@ app.use(express.json());
 // Register routes
 app.use('/api', profileRoutes);
 
+app.get('/', (req, res) => {
+  res.send(`Server is running`);
+});
+
 // Start server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
